@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="tr" data-lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Coffee — Bomonti'de küçük bir kahve durağı</title>
+<meta name="description" content="Little Coffee, Bomonti Şişli Perihan Sokağı'nda küçük bir kahve durağı. Hafta içi 07:30–18:30. Ev yapımı günlük tatlılar, sandviçler, özenli kahve.">
+<meta name="theme-color" content="#e8621a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='15'%20fill='%23e8621a'/%3E%3Ctext%20x='16'%20y='23'%20font-size='18'%20text-anchor='middle'%20fill='white'%3E%E2%98%95%3C/text%3E%3C/svg%3E">
+<!-- Paylaşım etiketleri (WhatsApp / Instagram / X) — alan adı alınınca og:image tam adres yapılacak -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Little Coffee — Bomonti'de küçük bir kahve durağı">
+<meta property="og:description" content="Perihan Sokağı, Bomonti. Hafta içi 07:30'da açıyoruz; ev yapımı tatlılar ve özenli kahve.">
+<meta property="og:image" content="images/og-kapak.jpg?v=3">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Little Coffee">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="images/og-kapak.jpg?v=3">
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-700-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/caveat-700-latin.woff2" crossorigin>
+<style>
+  /* yazi tipleri kendi sunucumuzdan */
+  @font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/caveat-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+  @font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/caveat-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/fraunces-400-i-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/fraunces-400-i-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/fraunces-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/fraunces-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/fraunces-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/fraunces-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(fonts/inter-400-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+  @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(fonts/inter-400-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  :root{
+    --turuncu:#e8621a; --turuncu-koyu:#c14e10; --turuncu-acik:#ffa25c;
+    --krem:#fff6ee; --krem2:#fffdfa; --kahve:#3a2417; --govde:#5b463a; --soluk:#7d675a;
+    --cizgi:rgba(58,36,23,.12);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--krem);color:var(--govde);
+       font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+       font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--kahve);margin:0;font-weight:600;letter-spacing:-.015em}
+  a{color:var(--turuncu-koyu);text-decoration:none}
+  img{max-width:100%;height:auto}
+  .sarici{width:1000px;max-width:100%;margin-left:auto;margin-right:auto;padding-left:30px;padding-right:30px}
+  .script{font-family:Caveat,"Segoe Script",cursive;font-weight:700;line-height:1}
+
+  /* ---------- üst bar ---------- */
+  .ust{position:sticky;top:0;z-index:30;background:rgba(255,246,238,.92);
+       backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--cizgi)}
+  .ust-ic{display:flex;align-items:center;gap:26px;height:66px}
+  .ust .logo{font-family:Caveat,"Segoe Script",cursive;font-weight:700;font-size:30px;color:var(--turuncu);line-height:1}
+  .ust .logo small{font-family:Inter,sans-serif;font-size:10px;font-weight:600;letter-spacing:.17em;color:var(--soluk);
+                   text-transform:uppercase;margin-left:8px;white-space:nowrap}
+  .ust nav{display:flex;gap:22px;margin-left:auto}
+  .ust nav a{font-size:14.5px;color:var(--govde)}
+  .ust nav a:hover{color:#b8450c}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--turuncu-koyu);color:#fff;
+       border:1px solid var(--turuncu-koyu);border-radius:999px;padding:12px 22px;font-size:15px;font-weight:500;
+       white-space:nowrap;transition:background .2s ease,border-color .2s ease}
+  .btn:hover{background:#a8400b;border-color:#a8400b}
+  .btn.hayalet{background:transparent;border-color:rgba(255,255,255,.6);color:#fff}
+  .btn.hayalet:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+  .btn.kucuk{padding:9px 18px;font-size:14px}
+  .btn.koyu{background:var(--kahve);border-color:var(--kahve)}
+  .btn.koyu:hover{background:#241409;border-color:#241409}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:620px;color:#fff;background:#2b1809}
+  .hero-bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 12%}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(28,17,10,.85),rgba(28,17,10,.55) 48%,rgba(28,17,10,.12) 78%)}
+  .hero-ic{padding-block:72px}
+  .hero h1{display:flex;align-items:baseline;gap:13px;color:#fff;line-height:1.05}
+  .hero h1 .script{font-size:100px;line-height:1.1}
+  .hero h1 .coffee{font-size:34px;font-weight:400;color:#ffe9d8}
+  .kicker{font-size:12px;letter-spacing:.22em;color:var(--soluk);margin:0 0 10px}
+  .hero .kicker{color:#ffe1ca}
+  .motto{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:23px;color:#fff0e4;margin:14px 0 12px}
+  .hero .alt{font-size:18px;color:#fff0e4;max-width:39ch;margin:0 0 26px}
+  .hero-btn{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+  .durum{display:inline-flex;align-items:center;gap:9px;font-size:14.5px;padding:8px 15px;border-radius:999px;
+         background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:#ffeede;margin:0}
+  .nokta{width:8px;height:8px;border-radius:50%;background:#c9b3a3;flex:0 0 auto}
+  .durum.acik .nokta{background:#5fc266}
+
+  /* ---------- bölümler ---------- */
+  .bolum{padding:78px 0}
+  .bolum.turuncu{background:var(--turuncu-koyu);color:#fff}
+  .bolum.turuncu h2{color:#fff}
+  .bolum.turuncu .kicker{color:#fff}
+  .bolum.turuncu p{color:#fff}
+  .bolum h2{font-size:38px;line-height:1.14;margin:0 0 18px}
+  .bolum p{max-width:62ch;margin:0 0 16px}
+  .not{font-size:14.5px;color:var(--soluk)}
+
+  /* ---------- menü ---------- */
+  .menu{display:grid;grid-template-columns:1fr 1fr;gap:14px 46px;margin-top:30px}
+  .grup{background:none;border:0;border-radius:0;padding:20px 0 0;border-top:1px solid var(--cizgi)}
+  .grup h3{font-size:23px;line-height:1.25;margin:0 0 4px;color:var(--turuncu-koyu)}
+  .grup .aciklama{font-size:13.5px;color:var(--soluk);margin:0 0 14px}
+  .satir{display:flex;align-items:baseline;gap:10px;font-size:16px;padding:7px 0}
+  .satir .ad{color:var(--kahve)}
+  .satir .noktalar{flex:1;border-bottom:1px dotted rgba(58,36,23,.28);transform:translateY(-4px)}
+  .satir .fiyat{font-weight:600;color:var(--turuncu-koyu);white-space:nowrap}
+  .menu-notlar{margin-top:28px;padding-top:22px;border-top:1px solid var(--cizgi)}
+  .menu-notlar .menu-dip{font-size:14px;max-width:88ch;color:var(--soluk);margin-bottom:12px}
+  .menu-notlar a{text-decoration:underline}
+  .menu-notlar details{font-size:14px;color:var(--soluk);max-width:88ch;margin-bottom:12px}
+  .menu-notlar summary{cursor:pointer;min-height:44px;align-content:center;font-weight:600;color:var(--govde)}
+  .menu-notlar details p{padding-top:8px;margin:0;line-height:1.6}
+  .text-link{display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:600;text-decoration:underline;color:var(--turuncu)}
+  .menu-dip{font-size:13.5px;color:var(--soluk);margin-top:18px}
+
+  /* ---------- ikili bölüm ---------- */
+  .iki{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+  .foto{border-radius:20px;overflow:hidden;box-shadow:0 20px 46px rgba(58,36,23,.18)}
+  .foto img{width:100%;display:block}
+  .foto.dikey img{aspect-ratio:4/5;object-fit:cover}
+
+  /* ---------- üçlü foto sırası ---------- */
+  .uclu{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:38px}
+  .uclu figure{margin:0}
+  .uclu img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;display:block;
+            box-shadow:0 12px 28px rgba(58,36,23,.14)}
+  .uclu figcaption{font-size:13.5px;color:var(--soluk);margin-top:9px;text-align:center}
+
+  /* ---------- galeri ---------- */
+  .galeri{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .galeri figure{margin:0}
+  .galeri img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;
+              box-shadow:0 14px 30px rgba(58,36,23,.14);transition:transform .35s ease}
+  .galeri figure:hover img{transform:translateY(-4px)}
+  .galeri figcaption{font-size:13.5px;color:var(--soluk);margin-top:9px;text-align:center}
+  .galeri.uc{grid-template-columns:repeat(3,1fr);margin-top:30px}
+
+  /* ---------- saatler / adres ---------- */
+  .adres{display:grid;grid-template-columns:1fr;gap:0;align-items:start}
+  .saat{border-collapse:collapse;font-size:16.5px;margin-top:8px;width:100%;max-width:640px}
+  .saat caption{text-align:left;font-size:12px;letter-spacing:.18em;color:#fff;margin-bottom:8px}
+  .saat th,.saat td{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.35);text-align:left;font-weight:400}
+  .saat td{text-align:right}
+  .saat th{padding-right:26px;color:#fff;white-space:nowrap}
+  .saat td{color:#fff}
+  .saat tr.bugun th,.saat tr.bugun td{font-weight:600}
+  .saat tr.bugun th::after{content:" • bugün";font-size:12.5px;font-weight:400;color:#fff}
+  .ig{display:inline-flex;align-items:center;vertical-align:-4px;margin-left:7px;color:#fff;opacity:.85}
+  .ig:hover{opacity:1}
+  .harita{margin-top:20px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.3)}
+  .harita iframe{display:block;width:100%;height:250px;border:0}
+
+  /* ---------- dip ---------- */
+  .dip{background:var(--kahve);color:#d8c3b4;font-size:14px}
+  .dip-ic{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;padding-bottom:26px}
+  .dip .logo{font-family:Caveat,cursive;font-weight:700;font-size:26px;color:var(--turuncu-acik)}
+  .dip-ic .sag{margin-left:auto;display:flex;gap:18px}
+  .dip a{color:var(--turuncu-acik);display:inline-block;padding:10px 2px}
+  .dil{display:inline-flex;align-items:center;gap:2px;border:1px solid var(--cizgi);background:none;border-radius:999px;
+       padding:7px 10px;font:inherit;font-size:12.5px;letter-spacing:.06em;color:var(--govde);cursor:pointer}
+  .dil span{opacity:.42}
+  .dil .dil-tr,.dil .dil-en{padding:0 3px}
+  html[data-lang="tr"] .dil .dil-tr,html[data-lang="en"] .dil .dil-en{opacity:1;font-weight:600}
+  html[data-lang="en"] .saat tr.bugun th::after{content:" • today"}
+  @media (max-width:700px){.dil{padding:6px 8px;font-size:12px}}
+
+  @media (max-width:820px){
+    .menu{grid-template-columns:1fr}
+    .iki{grid-template-columns:1fr;gap:26px}
+      }
+  section[id]{scroll-margin-top:80px}
+  :focus-visible{outline:3px solid var(--kahve);outline-offset:2px;border-radius:6px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.galeri figure:hover img{transform:none}}
+  .dip .bilgi{flex-basis:100%;font-size:12.5px;color:#b39d8d;margin-top:8px;line-height:1.6}
+  .dip .yapan{flex-basis:100%;font-size:12.5px;color:#b39d8d;margin-top:2px}
+  .dip .yapan a{color:var(--turuncu-acik)}
+  @media (max-width:700px){
+    section[id]{scroll-margin-top:74px}
+    .ust nav{display:none}
+    .ust-ic{gap:14px}
+    .ust .logo{font-size:25px}
+    .ust .logo small{font-size:10px;letter-spacing:.14em;margin-left:6px}
+    .ust .logo small .uzun{display:none}
+    .ust .btn.kucuk{padding:8px 14px;font-size:13px}
+          .galeri{grid-template-columns:1fr 1fr}
+    .galeri.uc{grid-template-columns:1fr 1fr}
+    .uclu{grid-template-columns:1fr 1fr}
+    .adres{grid-template-columns:1fr;gap:30px}
+    .bolum{padding:54px 0}
+    .bolum h2{font-size:29px}
+  }
+  .yorum-ust{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:44px}
+  .yorumlar-baslik{font-size:12px;letter-spacing:.2em;color:#fff;margin:0}
+  .yorum-kaydir{display:flex;gap:8px}
+  .yorum-kaydir button{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.12);color:#fff;font-size:19px;line-height:1;cursor:pointer;padding:0}
+  .yorum-kaydir button:hover{background:#fff;color:var(--turuncu-koyu)}
+  .yorumlar{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 2px 12px;margin:0;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.5) transparent}
+  .yorum{flex:0 0 300px;scroll-snap-align:start;margin:0;background:#fff;border-radius:18px;padding:18px 20px 16px;box-shadow:0 6px 18px rgba(60,30,10,.12)}
+  .yorum .yildiz{color:var(--turuncu);font-size:13.5px;letter-spacing:.2em;margin-bottom:8px}
+  .yorum blockquote{margin:0;font-size:16px;line-height:1.58;color:var(--kahve)}
+  .yorum figcaption{margin-top:9px;font-size:13px;color:var(--soluk)}
+  .yorum-dip{margin:6px 0 0;font-size:15px}
+  .yorum-dip a{color:#fff;text-decoration:underline}
+  @media (max-width:820px){.yorum{flex:0 0 82%}.yorum-kaydir{display:none}}
+
+  /* 8100 sayfasindaki hero kirilma noktalari */
+  @media(max-width:760px){
+    .hero{min-height:530px;align-items:flex-end}
+    .hero-bg{object-position:58% center}
+    .hero::after{background:linear-gradient(180deg,rgba(25,14,6,.12),rgba(25,14,6,.47) 26%,rgba(25,14,6,.88) 100%)}
+    .hero-ic{padding-block:44px}
+    .hero h1 .script{font-size:80px}
+    .hero h1 .coffee{font-size:29px}
+    .hero .alt{font-size:17px;max-width:34ch}
+    .hero .kicker{letter-spacing:.11em;font-size:11px}
+  }
+  @media(max-width:600px){
+    .hero h1 .script{font-size:74px}
+    .hero-btn{gap:10px}
+    .hero-btn .btn{padding-inline:18px;font-size:14px}
+  }
+  @media(max-width:360px){
+    .hero{min-height:545px}
+    .hero h1{gap:8px}
+    .hero h1 .script{font-size:68px}
+    .hero h1 .coffee{font-size:25px}
+    .hero .alt{font-size:16px}
+    .hero .kicker{letter-spacing:.05em}
+  }
+</style>
+<noscript><style>#durum{display:none}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Little Coffee",
+  "image": "images/hero.jpg?v=10",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Perihan Sokak 77/A, Merkez Mahallesi",
+    "addressLocality": "Şişli",
+    "addressRegion": "İstanbul",
+    "addressCountry": "TR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 41.0617567, "longitude": 28.9853491 },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:30", "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "11:00", "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "00:00", "closes": "00:00"
+    }
+  ],
+  "servesCuisine": ["Kahve", "Sandviç", "Tatlı"],
+  "priceRange": "₺",
+  "sameAs": ["https://www.instagram.com/littlecoffeesisli/"]
+}
+</script>
+</head>
+<body>
+
+<header class="ust">
+  <div class="sarici ust-ic">
+    <span class="logo">Little <small><span class="uzun">coffee · </span>bomonti</small></span>
+    <nav>
+      <a href="#menu" data-en="Menu">Menü</a>
+      <a href="#kahve" data-en="Our coffee">Kahvemiz</a>
+      <a href="#tatli" data-en="Sweets">Tatlılar</a>
+      <a href="#mekan" data-en="The place">Mekân</a>
+      <a href="#adres" data-en="Hours & address">Saatler &amp; adres</a>
+    </nav>
+    <button class="dil" id="dil" type="button" aria-label="dili değiştir / switch language"><span class="dil-tr">TR</span><span class="dil-en">EN</span></button>
+      <a class="btn kucuk" href="https://www.google.com/maps/place/Little+coffee/@41.0617587,28.9850845,20z/data=!4m6!3m5!1s0x14cab7b230eb2b75:0x9fd3e98d386d54ff!8m2!3d41.0617567!4d28.9853491!16s%2Fg%2F11yzb_cvby" target="_blank" rel="noopener" data-en="Directions">Yol tarifi</a>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="hero-baslik">
+  <img class="hero-bg" src="images/hero.jpg?v=11" srcset="images/hero-400.jpg?v=11 400w, images/hero-800.jpg?v=11 800w, images/hero.jpg?v=11 1536w" sizes="100vw" width="1536" height="1024" alt="Little Coffee'nin turuncu cephesi, tabelası ve önündeki masalar" data-en-alt="Little Coffee's orange facade, its sign and the tables in front" fetchpriority="high">
+  <div class="sarici hero-ic">
+    <p class="kicker" data-en="Bomonti · Şişli · Perihan Street">Bomonti · Şişli · Perihan Sokağı</p>
+    <h1 id="hero-baslik"><span class="script">Little</span><span class="coffee">coffee</span></h1>
+    <p class="motto">Everything little, taste is big.</p>
+    <p class="alt" data-en="A coffee break under the orange umbrella. And a slice of the daily sweets we make here alongside it.">Turuncu şemsiyenin altında bir kahve molası. Yanına, burada hazırladığımız günlük tatlılardan bir dilim.</p>
+    <div class="hero-btn">
+      <a class="btn" href="#menu" data-en="see the menu">menüyü gör</a>
+      <a class="btn hayalet" href="#adres" data-en="drop by">bize uğra</a>
+    </div>
+    <p class="durum" id="durum"><span class="nokta"></span><span id="durum-yazi" data-en="Checking the hours…">Saatlere bakılıyor…</span></p>
+  </div>
+</section>
+
+<section class="bolum" id="menu">
+  <div class="sarici">
+    <p class="kicker" data-en="Menu">Menü</p>
+    <h2 data-en="What have we got?">Ne var ne yok?</h2>
+    <p data-en="Our coffees come in two sizes: <b>small 240 ml</b> and <b>large 355 ml</b>. Sweets are made daily; come in the morning and they are all on the counter.">Kahvelerimiz iki boy: <b>small 240 ml</b> ve <b>large 355 ml</b>. Tatlılar günlük yapılır; sabah gelirsen hepsi tezgahta olur.</p>
+
+    <div class="menu">
+      <div class="grup">
+        <h3 data-en="Coffees">Kahveler</h3>
+        <p class="aciklama">Small 240 ml / large 355 ml</p>
+        <div class="satir"><span class="ad" data-en="Filter coffee">Filtre kahve</span><span class="noktalar"></span><span class="fiyat">160 / 180 ₺</span></div>
+        <div class="satir"><span class="ad" data-en="Espresso (single / double shot)">Espresso (tek / çift shot)</span><span class="noktalar"></span><span class="fiyat">120 / 150 ₺</span></div>
+        <div class="satir"><span class="ad">Americano</span><span class="noktalar"></span><span class="fiyat">160 / 180 ₺</span></div>
+        <div class="satir"><span class="ad">Cappuccino</span><span class="noktalar"></span><span class="fiyat">200 / 210 ₺</span></div>
+        <div class="satir"><span class="ad">Latte</span><span class="noktalar"></span><span class="fiyat">210 / 230 ₺</span></div>
+        <div class="satir"><span class="ad">Flat white</span><span class="noktalar"></span><span class="fiyat">210 ₺</span></div>
+        <div class="satir"><span class="ad">Cortado</span><span class="noktalar"></span><span class="fiyat">190 ₺</span></div>
+        <div class="satir"><span class="ad" data-en="Turkish coffee">Türk kahvesi</span><span class="noktalar"></span><span class="fiyat">135 ₺</span></div>
+      </div>
+
+      <div class="grup">
+        <h3 data-en="Sandwiches">Sandviçler</h3>
+        <p class="aciklama" data-en="Made through the day">Gün içinde hazırlanır</p>
+        <div class="satir"><span class="ad" data-en="Three-cheese bagel">3 peynirli bagel</span><span class="noktalar"></span><span class="fiyat">200 ₺</span></div>
+        <div class="satir"><span class="ad" data-en="Smoked turkey sandwich">Hindi füme sandviç</span><span class="noktalar"></span><span class="fiyat">210 ₺</span></div>
+        <div class="satir"><span class="ad">Mozzarella focaccia</span><span class="noktalar"></span><span class="fiyat">230 ₺</span></div>
+
+      </div>
+
+      <div class="grup">
+        <h3 data-en="Summer menu">Yaz menüsü</h3>
+        <p class="aciklama" data-en="Iced & flavoured">Buzlu ve şuruplu</p>
+        <div class="satir"><span class="ad" data-en="Tropical breeze (mango)">Tropik esinti <em style="color:var(--soluk);font-size:13px">(mango)</em></span><span class="noktalar"></span><span class="fiyat">235 ₺</span></div>
+        <div class="satir"><span class="ad" data-en="Purple dream (acai)">Mor düş <em style="color:var(--soluk);font-size:13px">(acai)</em></span><span class="noktalar"></span><span class="fiyat">240 ₺</span></div>
+        <div class="satir"><span class="ad" data-en="Pink garden (strawberry & hibiscus)">Pembe bahçe <em style="color:var(--soluk);font-size:13px">(çilek &amp; hibiskus)</em></span><span class="noktalar"></span><span class="fiyat">250 ₺</span></div>
+        <div class="satir"><span class="ad" data-en="Lime refresher">Lime ferahlığı</span><span class="noktalar"></span><span class="fiyat">230 ₺</span></div>
+      </div>
+
+      <div class="grup">
+        <h3 data-en="Homemade daily sweets">Ev yapımı günlük tatlılar</h3>
+        <p class="aciklama" data-en="Fresh daily">Günlük taze</p>
+        <div class="satir"><span class="ad" data-en="Lemon & blackberry cake">Limonlu böğürtlenli kek</span><span class="noktalar"></span><span class="fiyat">150 ₺</span></div>
+        <div class="satir"><span class="ad">Brownie</span><span class="noktalar"></span><span class="fiyat">200 ₺</span></div>
+        <div class="satir"><span class="ad">Banana bread</span><span class="noktalar"></span><span class="fiyat">150 ₺</span></div>
+        <div class="satir"><span class="ad">Fit cup</span><span class="noktalar"></span><span class="fiyat">120 ₺</span></div>
+        <div class="satir"><span class="ad">Dream puff</span><span class="noktalar"></span><span class="fiyat">200 ₺</span></div>
+      </div>
+
+      <div class="grup">
+        <h3 data-en="On the side">Yanına</h3>
+        <p class="aciklama" data-en="From the counter">Tezgâhtan</p>
+        <div class="satir"><span class="ad" data-en="Tea (tea bag)">Çay (poşet)</span><span class="noktalar"></span><span class="fiyat">60 ₺</span></div>
+        <div class="satir"><span class="ad">Uludağ premium soda</span><span class="noktalar"></span><span class="fiyat">100 ₺</span></div>
+        <div class="satir"><span class="ad" data-en="Water (330 ml)">Su (330 ml)</span><span class="noktalar"></span><span class="fiyat">30 ₺</span></div>
+        <div class="satir"><span class="ad" data-en="Healthy snack (packaged)">Sağlıklı atıştırmalık (paket)</span><span class="noktalar"></span><span class="fiyat">200 ₺</span></div>
+      </div>
+    </div>
+        <div class="menu-notlar">
+      <p class="menu-dip" data-en="All prices include taxes. Main menu: 15 June 2026 · Summer menu: 1 June 2026. For current prices and product info you can call us: 0542 422 91 61.">Fiyatlarımıza vergiler dahildir. Ana menü: <time datetime="2026-06-15">15 Haziran 2026</time> · Yaz menüsü: <time datetime="2026-06-01">1 Haziran 2026</time>. Güncel fiyat ve ürün bilgisi için <a href="tel:+905424229161">bizi arayabilirsin</a>.</p>
+      <p class="menu-dip" data-en="Sweet and sandwich choices can change through the day. You can ask us about the contents of Fit cup and Dream puff, the day's products and allergens before ordering.">Tatlı ve sandviç çeşitleri gün içinde değişebilir. Fit cup ve Dream puff içeriğini, günün ürünlerini ve alerjenlerini siparişten önce bize sorabilirsin.</p>
+      <details><summary data-en="Allergen info">Alerjen bilgisi</summary><p data-en="Our products may contain gluten (wheat), milk, egg, nuts–pistachio and sesame. Cross-contamination is possible in a shared preparation area. If you have an allergy, tell us before ordering; let us check the contents of your choice together.">Ürünlerimizde gluten (buğday), süt, yumurta, fındık–Antep fıstığı ve susam bulunabilir. Ortak hazırlık alanında çapraz bulaşma olabilir. Alerjin varsa sipariş vermeden önce bize söyle; seçtiğin ürünün içeriğini birlikte kontrol edelim.</p></details>
+      <a class="text-link" href="https://tgoyemek.com/restoranlar/476994" target="_blank" rel="noopener" data-en="Menu and ordering on Trendyol Go ↗">Trendyol Go'da menü ve sipariş ↗</a>
+      <p class="menu-dip" data-en="Ordering hours, delivery area and platform prices are shown on Trendyol Go.">Sipariş saatleri, teslimat bölgesi ve platform fiyatları Trendyol Go'da gösterilir.</p>
+    </div>
+    <!-- NOT: menü 15.06.2026 tarihli tabeladan alındı; fiyat değişirse buradan güncellenecek -->
+  </div>
+</section>
+
+<section class="bolum" id="kahve">
+  <div class="sarici">
+    <div class="iki">
+      <div class="foto dikey"><img src="images/kahvemiz.jpg?v=5" srcset="images/kahvemiz-400.jpg?v=5 400w, images/kahvemiz-800.jpg?v=5 800w, images/kahvemiz.jpg?v=5 970w" sizes="(max-width:820px) 100vw, 470px" width="970" height="1212" alt="Little kupasında latte, pencerenin önünde; arkada turuncu şemsiyeli kaldırım masaları" loading="lazy" decoding="async"></div>
+      <div class="metin">
+        <p class="kicker" data-en="Our coffee">Kahvemiz</p>
+        <h2 data-en="Small but serious coffee">Küçük ama ciddi bir kahve</h2>
+        <p data-en="Our espresso is ground fresh for every cup on the La Cimbali, milk is steamed separately. Filter coffee, americano, latte, flat white, cortado and turkish coffee &mdash; all fresh.">Espressomuz La Cimbali'de her bardak için yeniden çekilir, süt ayrı ayrı köpürtülür. Filtre kahve, americano, latte, flat white, cortado ve türk kahvesi — hepsi taze.</p>
+        <p data-en="If you fancy something iced, we have a summer menu too: mango, acai, strawberry-hibiscus and lime.">Canın buzlu bir şey çekerse yaz menümüz de var: mango, acai, çilek-hibiskus ve lime.</p>
+        <p class="not" data-en="Just tell us how sweet you like it; we will do the rest.">Şekerini söylemen yeter; gerisini biz hallederiz.</p>
+      </div>
+    </div>
+
+    <div class="uclu">
+      <figure><img src="images/makine.jpg?v=3" srcset="images/makine-400.jpg?v=3 400w, images/makine-800.jpg?v=3 800w, images/makine.jpg?v=3 1000w" sizes="(max-width:820px) 48vw, 470px" width="1000" height="750" alt="La Cimbali espresso makinesi" data-en-alt="La Cimbali espresso machine" loading="lazy" decoding="async"><figcaption data-en="Espresso machine">Espresso makinesi</figcaption></figure>
+      <figure><img src="images/kurabiye-latte.jpg?v=3" srcset="images/kurabiye-latte-400.jpg?v=3 400w, images/kurabiye-latte-800.jpg?v=3 800w, images/kurabiye-latte.jpg?v=3 1024w" sizes="(max-width:820px) 48vw, 470px" width="1024" height="682" alt="Kurabiye ve latte" loading="lazy" decoding="async"><figcaption data-en="Cookie & latte">Kurabiye &amp; latte</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="bolum" id="tatli" style="background:var(--krem2);border-top:1px solid var(--cizgi);border-bottom:1px solid var(--cizgi)">
+  <div class="sarici">
+    <p class="kicker" data-en="Sweets">Tatlılar</p>
+    <h2 data-en="We make the sweets right here">Tatlıları burada yapıyoruz</h2>
+    <p data-en="Lemon & blackberry cake, brownie, banana bread, fit cup... All made by hand daily and put in the display. A slice alongside your coffee is the best way.">Limonlu böğürtlenli kek, brownie, banana bread, fit cup... Hepsi günlük elde yapılıp vitrine konur. Kahvenin yanına bir dilim almak en güzeli.</p>
+    <p data-en="We also make the sandwiches through the day: three-cheese bagel, smoked turkey sandwich and mozzarella focaccia.">Sandviçleri de gün içinde hazırlıyoruz: 3 peynirli bagel, hindi füme sandviç ve mozzarella focaccia.</p>
+    <div class="galeri uc">
+      <figure><img src="images/kahve-fincan.jpg?v=3" srcset="images/kahve-fincan-400.jpg?v=3 400w, images/kahve-fincan-800.jpg?v=3 800w, images/kahve-fincan.jpg?v=3 1170w" sizes="(max-width:700px) 45vw, 310px" width="1170" height="1560" alt="Elde Little kupası, arkada vitrindeki tart ve biscotti'ler" data-en-alt="A Little cup in hand, tarts and biscotti in the display behind" loading="lazy" decoding="async"><figcaption data-en="From the display">Vitrinden</figcaption></figure>
+      <figure><img src="images/tatli-masasi.jpg?v=3" srcset="images/tatli-masasi-400.jpg?v=3 400w, images/tatli-masasi.jpg?v=3 512w" sizes="(max-width:700px) 45vw, 310px" width="512" height="682" alt="Masada kahve ve tatlı tabağı" data-en-alt="Coffee and a dessert plate on the table" loading="lazy" decoding="async"><figcaption data-en="Sweets on the table">Masadaki tatlılar</figcaption></figure>
+      <figure><img src="images/tart-kahve.jpg?v=3" srcset="images/tart-kahve-400.jpg?v=3 400w, images/tart-kahve-800.jpg?v=3 800w, images/tart-kahve.jpg?v=3 1170w" sizes="(max-width:700px) 45vw, 310px" width="1170" height="1506" alt="Fıstıklı tart ve cappuccino" data-en-alt="Pistachio tart and cappuccino" loading="lazy" decoding="async"><figcaption data-en="Tart & coffee">Tart &amp; kahve</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="bolum" id="mekan">
+  <div class="sarici">
+    <p class="kicker" data-en="The place">Mekân</p>
+    <h2 data-en="A little stop on Perihan Sokağı">Perihan Sokağı'nda küçük bir durak</h2>
+    <p data-en="When you see the orange sign, you are here. Tables under the umbrella outside, a window seat and the coffee counter inside. Take a closer look at a few corners of Little.">Turuncu tabelayı gördüğünde buradasın. Dışarıda şemsiye altında masalar, içeride pencere önü ve kahve tezgâhı. Little'ın birkaç köşesine yakından bak.</p>
+    <div class="galeri">
+      <figure><img src="images/cephe-aksam.jpg?v=3" srcset="images/cephe-aksam-400.jpg?v=3 400w, images/cephe-aksam-800.jpg?v=3 800w, images/cephe-aksam.jpg?v=3 1024w" sizes="(max-width:700px) 45vw, 310px" width="1024" height="1365" alt="Little Coffee akşam cephesi" data-en-alt="Little Coffee facade in the evening" loading="lazy" decoding="async"><figcaption data-en="The facade at dusk">Akşam cephesi</figcaption></figure>
+      <figure><img src="images/toplu.jpg?v=9" srcset="images/toplu-400.jpg?v=9 400w, images/toplu.jpg?v=9 714w" sizes="(max-width:700px) 45vw, 310px" width="714" height="892" alt="Little Coffee'nin kaldırım masalarında toplanan misafirler" data-en-alt="Guests gathered around the pavement tables at Little Coffee" loading="lazy" decoding="async"><figcaption data-en="Coffee break">Kahve molası</figcaption></figure>
+      <figure><img src="images/gece-vitrin.jpg?v=3" srcset="images/gece-vitrin-400.jpg?v=3 400w, images/gece-vitrin-800.jpg?v=3 800w, images/gece-vitrin.jpg?v=3 1024w" sizes="(max-width:700px) 45vw, 310px" width="1024" height="1365" alt="Gece pencereden içerisi" data-en-alt="Inside, seen through the window at night" loading="lazy" decoding="async"><figcaption data-en="Inside, through the window">Pencereden içerisi</figcaption></figure>
+      <figure><img src="images/kesit-espresso.jpg?v=3" srcset="images/kesit-espresso-400.jpg?v=3 400w, images/kesit-espresso.jpg?v=3 720w" sizes="(max-width:700px) 45vw, 310px" width="720" height="1280" alt="Espresso Little bardağına akarken" data-en-alt="Espresso pouring into a Little cup" loading="lazy" decoding="async"><figcaption data-en="The espresso pour">Espresso akışı</figcaption></figure>
+      <figure><img src="images/kapi-onu.jpg?v=3" srcset="images/kapi-onu-400.jpg?v=3 400w, images/kapi-onu-800.jpg?v=3 800w, images/kapi-onu.jpg?v=3 1170w" sizes="(max-width:700px) 45vw, 310px" width="1170" height="1552" alt="Kapı önünde kahve" data-en-alt="Coffee at the door" loading="lazy" decoding="async"><figcaption data-en="Coffee at the door">Kapı önünde kahve</figcaption></figure>
+      <figure><img src="images/lego-kedi.jpg?v=3" srcset="images/lego-kedi-400.jpg?v=3 400w, images/lego-kedi-800.jpg?v=3 800w, images/lego-kedi.jpg?v=3 1000w" sizes="(max-width:700px) 45vw, 310px" width="1000" height="1333" alt="Vitrindeki lego kedi" loading="lazy" decoding="async"><figcaption data-en="Window cat: Lego">Vitrin kedisi: Lego</figcaption></figure>
+      <figure><img src="images/kesit-kedi.jpg?v=3" srcset="images/kesit-kedi-400.jpg?v=3 400w, images/kesit-kedi.jpg?v=3 720w" sizes="(max-width:700px) 45vw, 310px" width="720" height="1280" alt="Kırmızı sandalyede uyuyan kedi" data-en-alt="A cat asleep on the red chair" loading="lazy" decoding="async"><figcaption data-en="A sleeping guest">Uyuyan misafir</figcaption></figure>
+      <figure><img src="images/duvar-cerceve.jpg?v=3" srcset="images/duvar-cerceve-400.jpg?v=3 400w, images/duvar-cerceve-800.jpg?v=3 800w, images/duvar-cerceve.jpg?v=3 1170w" sizes="(max-width:700px) 45vw, 310px" width="1170" height="1560" alt="Duvardaki çerçeveler" data-en-alt="Frames on the wall" loading="lazy" decoding="async"><figcaption data-en="Frames on the wall">Duvar çerçeveleri</figcaption></figure>
+      <figure><img src="images/teras.jpg?v=3" srcset="images/teras-400.jpg?v=3 400w, images/teras-800.jpg?v=3 800w, images/teras.jpg?v=3 1000w" sizes="(max-width:700px) 45vw, 310px" width="1000" height="750" alt="Kaldırımdaki turuncu şemsiye ve masalar" data-en-alt="The orange umbrella and tables on the pavement" loading="lazy" decoding="async"><figcaption data-en="Pavement tables">Kaldırım masaları</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="bolum turuncu" id="adres">
+  <div class="sarici">
+    <p class="kicker" data-en="Hours & address">Saatler &amp; adres</p>
+    <h2 data-en="Come by">Bize uğrayın</h2>
+    <div class="adres">
+      <div>
+        <table class="saat">
+          <caption data-en="Weekly opening hours">Haftalık açılış saatleri</caption>
+          <tr data-gun="Mon Tue Wed Thu Fri"><th scope="row" data-en="Monday&ndash;Friday">Pazartesi–Cuma</th><td>07:30 – 18:30</td></tr>
+          <tr data-gun="Sat"><th scope="row" data-en="Saturday">Cumartesi</th><td>11:00 – 17:00</td></tr>
+          <tr data-gun="Sun"><th scope="row" data-en="Sunday">Pazar</th><td data-en="Closed">Kapalı</td></tr>
+        </table>
+        <p style="margin-top:16px" data-en="Early mornings are our quietest hours; grab your coffee and start the day slowly.">Sabahın ilk saatleri en sakin saatlerimiz; kahveni alıp güne yavaş bir başlangıç yapabilirsin.</p>
+        <p style="margin-top:10px;font-size:14.5px"><span data-en="We are closed on public holidays; we post any updates on Instagram.">Resmî tatil ve bayramlarda kapalıyız; güncel duyuruyu Instagram'dan yaparız.</span> <a class="ig" href="https://www.instagram.com/littlecoffeesisli/" target="_blank" rel="noopener" aria-label="Instagram sayfamız: @littlecoffeesisli" data-en-aria-label="Our Instagram: @littlecoffeesisli" title="@littlecoffeesisli"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a></p>        <!-- TELEFON / WHATSAPP: numara gelince bu satira eklenir -->
+      </div>
+    </div>
+      <div class="yorum-ust">
+      <p class="yorumlar-baslik" data-en="Our Google reviews — 5.0">Google yorumlarımız — 5,0</p>
+      <div class="yorum-kaydir">
+        <button type="button" aria-label="önceki yorum" data-en-aria-label="previous review" data-yon="-1">‹</button>
+        <button type="button" aria-label="sonraki yorum" data-en-aria-label="next review" data-yon="1">›</button>
+      </div>
+    </div>
+    <div class="yorumlar" role="region" aria-label="Google yorumları — kaydırılabilir" data-en-aria-label="Google reviews — swipeable">
+<figure class="yorum">
+        <div class="yildiz" role="img" aria-label="5 yıldız" data-en-aria="5 stars" data-en-aria-label="5 stars">★★★★★</div>
+        <blockquote>Mahalleye minik ama çok keyifli bir kaçış noktası gelmiş 🫶🏻 Kahvesi güzel, ortamı huzurlu, atıştırmalıklarıyla da insanı mutlu eden bir yer.</blockquote>
+        <figcaption data-en="I**** · Google review">I**** · Google yorumu</figcaption>
+      </figure>
+      <figure class="yorum">
+        <div class="yildiz" role="img" aria-label="5 yıldız" data-en-aria="5 stars">★★★★★</div>
+        <blockquote>Turkish kahvesi çok lezzetliydi, mekan sahipleri çok samimi ve güler yüzlüydü. Ev yapımı brownie çok lezzetliydi 😍 Birden fazla ev yapımı tatlı vardı.</blockquote>
+        <figcaption data-en="N*** 9* · Google review">N*** 9* · Google yorumu</figcaption>
+      </figure>
+      <figure class="yorum">
+        <div class="yildiz" role="img" aria-label="5 yıldız" data-en-aria="5 stars">★★★★★</div>
+        <blockquote>Hem hayvan hem insan dostu bir cafe.. önünde patili mahalle sakinleri için su ve yemek var. İşletmecisi Seda hnm süper içten ve hoş sohbet.</blockquote>
+        <figcaption data-en="C**** T***** · Google review">C**** T***** · Google yorumu</figcaption>
+      </figure>
+      <figure class="yorum">
+        <div class="yildiz" role="img" aria-label="5 yıldız" data-en-aria="5 stars">★★★★★</div>
+        <blockquote>Şehirde sakin ve kaliteli bir yer arıyorsanız kesinlikle uğrayın. Atmosferi çok güzel, kahve lezzeti tam kıvamında. El yapımı ürünleri de hem taze hem çok lezzetli.</blockquote>
+        <figcaption data-en="A****** S**** · Google review">A****** S**** · Google yorumu</figcaption>
+      </figure>
+      <figure class="yorum">
+        <div class="yildiz" role="img" aria-label="5 yıldız" data-en-aria="5 stars">★★★★★</div>
+        <blockquote>Yolum düşüp girdim. Kahvesi gerçekten güzeldi, ev yapımı ve sağlıklı şeyler de var. Seda Hanım da çok ilgiliydi.</blockquote>
+        <figcaption data-en="G***** A********* · Google review">G***** A********* · Google yorumu</figcaption>
+      </figure>
+      <figure class="yorum">
+        <div class="yildiz" role="img" aria-label="5 yıldız" data-en-aria="5 stars">★★★★★</div>
+        <blockquote>Uzun zamandır bu kadar nitelikli bir kahve içmemiştim.</blockquote>
+        <figcaption data-en="E**** E***** B******** · Google review">E**** E***** B******** · Google yorumu</figcaption>
+      </figure>
+    </div>
+    <p class="yorum-dip"><a href="https://www.google.com/maps/place/Little+coffee/@41.0617587,28.9850845,20z/data=!4m6!3m5!1s0x14cab7b230eb2b75:0x9fd3e98d386d54ff!8m2!3d41.0617567!4d28.9853491!16s%2Fg%2F11yzb_cvby" target="_blank" rel="noopener" data-en="Read all reviews on Google →">Tüm yorumları Google'da oku →</a></p>
+
+    <div class="harita">
+          <iframe title="Little Coffee haritası" data-en-title="Little Coffee map" loading="lazy" referrerpolicy="no-referrer"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=28.98027%2C41.05926%2C28.99043%2C41.06425&amp;layer=mapnik&amp;marker=41.0617567%2C28.9853491"></iframe>
+        </div>
+
+  </div>
+</section>
+
+<footer class="dip">
+  <div class="sarici dip-ic">
+    <span class="logo">Little</span>
+    <span>Everything little, taste is big.</span>
+    <span class="bilgi" data-en="Little Coffee · Perihan Sokak 77/A, Merkez Mah. · Bomonti — Şişli / İstanbul · No forms, cookies or analytics on our site; we do not collect any information about you. The map comes from OpenStreetMap, fonts load from our own server. · © 2026 Little Coffee">Little Coffee · Perihan Sokak 77/A, Merkez Mah. · Bomonti — Şişli / İstanbul · Sitemizde form, çerez ve analitik araç yok; ziyaretinizde sizden bilgi toplamayız. Harita OpenStreetMap'ten, yazı tipleri kendi sunucumuzdan yüklenir. · © 2026 Little Coffee</span>
+    <span class="sag">
+      <a href="https://www.instagram.com/littlecoffeesisli/" target="_blank" rel="noopener">@littlecoffeesisli</a>
+      <a href="#menu" data-en="Menu">Menü</a>
+      <a href="#adres" data-en="Address">Adres</a>
+    </span>
+    <span class="yapan"><span data-en="Web Designer">Web Tasarım</span>: <a href="https://www.atashalci.com" target="_blank" rel="noopener">atashalci.com</a></span>
+  </div>
+</footer>
+
+<script>
+  // İstanbul saatine göre açık/kapalı durumu + bugünün satırını işaretleme (TR/EN)
+  window.durumGuncelle = function () {
+    var en = (document.documentElement.getAttribute("data-lang") === "en");
+    var parcalar = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Istanbul", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date());
+    var al = function (t) { for (var i = 0; i < parcalar.length; i++) { if (parcalar[i].type === t) return parcalar[i].value; } return ""; };
+    var gun = al("weekday");
+    var dk = parseInt(al("hour"), 10) * 60 + parseInt(al("minute"), 10);
+    var plan = { Mon: [450, 1110], Tue: [450, 1110], Wed: [450, 1110], Thu: [450, 1110], Fri: [450, 1110], Sat: [660, 1020], Sun: null };
+    var bugun = plan[gun];
+    var kutu = document.getElementById("durum");
+    var yazi = document.getElementById("durum-yazi");
+    if (!yazi) return;
+    var saat = function (x) { return ("0" + Math.floor(x / 60)).slice(-2) + ":" + ("0" + (x % 60)).slice(-2); };
+    var yGun = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Istanbul", weekday: "short" }).format(new Date(Date.now() + 86400000));
+    var yarin = plan[yGun];
+    var m;
+    if (!bugun) {
+      m = en ? (yarin ? ("Closed today · we open tomorrow at " + saat(yarin[0])) : "closed today · closed tomorrow too")
+               : (yarin ? ("Bugün kapalıyız · yarın " + saat(yarin[0]) + "'da açıyoruz") : "Bugün kapalıyız · yarın da kapalıyız");
+    } else if (dk >= bugun[0] && dk < bugun[1]) {
+      if (kutu) kutu.className = "durum acik";
+      m = en ? ("We are open now · today " + saat(bugun[0]) + "–" + saat(bugun[1])) : ("Şu an açığız · bugün " + saat(bugun[0]) + "–" + saat(bugun[1]));
+    } else if (dk < bugun[0]) {
+      m = en ? ("We are closed now · we open today at " + saat(bugun[0])) : ("Şu an kapalıyız · bugün " + saat(bugun[0]) + "'da açıyoruz");
+    } else {
+      m = en ? (yarin ? ("We are closed now · we open tomorrow at " + saat(yarin[0])) : "we are closed now · closed tomorrow")
+               : (yarin ? ("Şu an kapalıyız · yarın " + saat(yarin[0]) + "'da açıyoruz") : "Şu an kapalıyız · yarın kapalıyız");
+    }
+    yazi.textContent = m;
+    var satirlar = document.querySelectorAll(".saat tr");
+    for (var i = 0; i < satirlar.length; i++) {
+      if ((satirlar[i].getAttribute("data-gun") || "").split(" ").indexOf(gun) > -1) satirlar[i].className = "bugun";
+    }
+  };
+  window.durumGuncelle();
+</script>
+<script>
+(function(){var t=document.querySelector(".yorumlar");if(!t)return;
+document.querySelectorAll(".yorum-kaydir button").forEach(function(b){b.addEventListener("click",function(){
+var k=t.querySelector(".yorum");var adim=(k?k.getBoundingClientRect().width:300)+16;
+t.scrollBy({left:adim*Number(b.dataset.yon),behavior:"smooth"});});});})();
+</script>
+<script>
+  // ---- TR / EN dil değiştirici ----
+  (function () {
+    var KOK = document.documentElement;
+    var BASLIK = { tr: "Little Coffee — Bomonti'de küçük bir kahve durağı", en: "Little Coffee — a small coffee stop in Bomonti" };
+    var ACIKLAMA = {
+      tr: "Little Coffee, Bomonti Şişli Perihan Sokağı'nda küçük bir kahve durağı. Hafta içi 07:30–18:30. Ev yapımı günlük tatlılar, sandviçler, özenli kahve.",
+      en: "Little Coffee is a small coffee stop on Perihan Sokağı in Bomonti, Şişli. Weekdays 07:30–18:30. Homemade daily sweets, sandwiches, careful coffee." };
+    var OG = { tr: "Perihan Sokağı, Bomonti. Hafta içi 07:30'da açıyoruz; ev yapımı tatlılar ve özenli kahve.",
+               en: "Perihan Sokağı, Bomonti. We open at 07:30 on weekdays; homemade sweets and careful coffee." };
+    function uygula(dil) {
+      KOK.setAttribute("data-lang", dil);
+      KOK.setAttribute("lang", dil);
+      document.title = BASLIK[dil];
+      var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", ACIKLAMA[dil]);
+      var ot = document.querySelector('meta[property="og:title"]'); if (ot) ot.setAttribute("content", BASLIK[dil]);
+      var od = document.querySelector('meta[property="og:description"]'); if (od) od.setAttribute("content", OG[dil]);
+      var ol = document.querySelector('meta[property="og:locale"]'); if (ol) ol.setAttribute("content", dil === "en" ? "en_GB" : "tr_TR");
+      var og = document.querySelector('meta[property="og:locale:alternate"]');
+      var dugme = document.getElementById("dil");
+      if (dugme) dugme.setAttribute("aria-pressed", dil === "en" ? "true" : "false");
+      var ogeler = document.querySelectorAll("[data-en]");
+      for (var i = 0; i < ogeler.length; i++) {
+        var el = ogeler[i];
+        if (!el.dataset.tr) el.dataset.tr = el.innerHTML;
+        el.innerHTML = (dil === "en") ? el.getAttribute("data-en") : el.dataset.tr;
+      }
+      var ozler = document.querySelectorAll("[data-en-alt],[data-en-aria],[data-en-title]");
+      for (var j = 0; j < ozler.length; j++) {
+        var e2 = ozler[j];
+        ["alt", "aria-label", "title"].forEach(function (ad) {
+          var anahtar = "data-en-" + (ad === "aria-label" ? "aria" : ad);
+          if (e2.hasAttribute(anahtar)) {
+            var sakla = "data-tr-" + (ad === "aria-label" ? "aria" : ad);
+            if (!e2.hasAttribute(sakla)) e2.setAttribute(sakla, e2.getAttribute(ad) || "");
+            e2.setAttribute(ad, (dil === "en") ? e2.getAttribute(anahtar) : e2.getAttribute(sakla));
+          }
+        });
+      }
+      if (window.durumGuncelle) window.durumGuncelle();
+      try { localStorage.setItem("little-dil", dil); } catch (e) { }
+    }
+    var kayitli = null;
+    try { kayitli = localStorage.getItem("little-dil"); } catch (e) { }
+    var baslangic = kayitli || ((navigator.language || "tr").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+    uygula(baslangic);
+    var b = document.getElementById("dil");
+    if (b) b.addEventListener("click", function () {
+      uygula(KOK.getAttribute("data-lang") === "en" ? "tr" : "en");
+    });
+  })();
+</script>
+</body>
+</html>
